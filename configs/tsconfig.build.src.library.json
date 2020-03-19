@@ -1,0 +1,9 @@
+{
+    "extends": "./tsconfig.build.src.json",
+    "compilerOptions": {
+        "outDir": "../lib",
+        "declaration": false,
+        "removeComments": true,
+        "sourceMap": true,
+    },
+}

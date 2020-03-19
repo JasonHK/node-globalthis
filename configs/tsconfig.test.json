@@ -1,0 +1,23 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "rootDir": "../",
+        "paths": {
+            "*": [
+                "node_modules/*",
+            ],
+            "src": [
+                "src",
+            ],
+            "src/*": [
+                "src/*",
+            ],
+            "jest-in-case": [
+                "types/jest-in-case",
+            ],
+        },
+    },
+    "include": [
+        "../tests/**/*.ts",
+    ],
+}

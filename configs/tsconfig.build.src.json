@@ -1,0 +1,16 @@
+{
+    "extends": "./tsconfig.build.json",
+    "compilerOptions": {
+        "rootDir": "../src",
+        "lib": [
+            "DOM",
+            "ES2015",
+        ],
+        "alwaysStrict": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+    },
+    "include": [
+        "../src/**/*.ts",
+    ],
+}
