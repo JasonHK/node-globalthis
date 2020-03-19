@@ -1,0 +1,24 @@
+{
+  "name": "@jasonhk/globalthis",
+  "description": "A polyfill package providing universal support for the global `globalThis` property.",
+  "version": "0.0.1",
+  "license": "Unlicense",
+  "author": "Jason Kwok <github@jasonhk.email> (https://jasonhk.net/)",
+  "homepage": "https://github.com/JasonHK/node-globalthis#readme",
+  "keywords": [
+    "globalThis"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonHK/node-globalthis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JasonHK/node-globalthis/issues"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
