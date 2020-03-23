@@ -12,10 +12,10 @@
             "src/*": [
                 "src/*",
             ],
-            "jest-in-case": [
-                "types/jest-in-case",
-            ],
         },
+        "types": [
+            "intern",
+        ],
     },
     "include": [
         "../tests/**/*.ts",

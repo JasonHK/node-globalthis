@@ -17,14 +17,20 @@
   },
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx intern"
   },
   "dependencies": {
     "lodash.isobject": "^3.0.2"
   },
   "devDependencies": {
+    "@types/jsdom": "^16.1.0",
     "@types/lodash.isobject": "^3.0.6",
     "@types/node": "^13.9.2",
+    "@types/sinon": "^7.5.2",
+    "intern": "^4.8.0",
+    "jsdom": "^16.2.1",
+    "sinon": "^9.0.1",
+    "ts-node": "^8.7.0",
     "typescript": "^3.8.3"
   }
 }

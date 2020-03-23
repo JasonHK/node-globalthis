@@ -1,0 +1,20 @@
+{
+    "$schema": "./node_modules/intern/schemas/config.json",
+    "node": {
+        "tsconfig": "./configs/tsconfig.test.json",
+        "plugins": [],
+        "suites": [
+            "./tests/unit/**/*.test.ts"
+        ]
+    },
+    "browser": {
+        "suites": [
+            "./tests/unit/**/*.test.ts"
+        ]
+    },
+    "configs": {
+        "selenium": {
+
+        }
+    }
+}
