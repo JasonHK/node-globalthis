@@ -2,7 +2,7 @@
 
 declare global
 {
-    let __GLOBAL__: typeof globalThis;
+    var __GLOBAL__: typeof globalThis;
 
     interface Object
     {
