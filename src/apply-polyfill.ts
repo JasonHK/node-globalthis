@@ -1,11 +1,9 @@
 "use strict";
 
-import { getGlobal } from "./get-global";
+import { globalThis as context } from "./globalthis";
 
 export function applyPolyfill(): void
 {
-    const context = getGlobal();
-
     if (!Object.prototype.hasOwnProperty.call(context, "globalThis") || (context.globalThis !== context))
     {
         try

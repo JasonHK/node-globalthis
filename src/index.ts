@@ -1,10 +1,9 @@
 "use strict";
 
-import { getGlobal } from "./get-global";
-
-export const globalThis = getGlobal();
+import { globalThis } from "./globalthis";
 
 export * from "./apply-polyfill";
 export * from "./get-global";
+export * from "./globalthis";
 
 export default globalThis;
