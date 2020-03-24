@@ -39,7 +39,7 @@ suite(
             });
             
         test(
-            "Global `global` property exists",
+            "The global `global` property exists",
             () =>
             {
                 realGlobal.global = fakeNodeGlobal;
@@ -47,7 +47,7 @@ suite(
             });
 
         test(
-            "Global `self` property exists",
+            "The global `self` property exists",
             () =>
             {
                 realGlobal.self = fakeBrowserGlobal;
@@ -55,7 +55,7 @@ suite(
             });
         
         test(
-            "Global `window` property exists",
+            "The global `window` property exists",
             () =>
             {
                 realGlobal.window = fakeBrowserGlobal;
