@@ -9,16 +9,16 @@ suite(
     "getGlobalFallback()",
     () =>
     {
-        const fakeBrowserGlobal = {} as unknown as Window & typeof globalThis;
-        const fakeNodeGlobal = {} as unknown as NodeJS.Global & typeof globalThis;
+        const browserGlobalFake = {} as unknown as Window & typeof globalThis;
+        const nodeGlobalFake = {} as unknown as NodeJS.Global & typeof globalThis;
 
-        let realGlobal: typeof global;
+        let globalReal: typeof global;
 
         before(
             () =>
             {
                 // Store the real `global` property in a safe place, then delete the property.
-                realGlobal = global;
+                globalReal = global;
                 delete global.global;
             });
         
@@ -26,40 +26,40 @@ suite(
             () =>
             {
                 // Delete the fake global properties if needed.
-                if ("global" in realGlobal) { delete realGlobal.global; }
-                if ("self" in realGlobal) { delete realGlobal.self; }
-                if ("window" in realGlobal) { delete realGlobal.window; }
+                if ("global" in globalReal) { delete globalReal.global; }
+                if ("self" in globalReal) { delete globalReal.self; }
+                if ("window" in globalReal) { delete globalReal.window; }
             });
         
         after(
             () =>
             {
                 // Restore the real `global` property.
-                realGlobal.global = realGlobal;
+                globalReal.global = globalReal;
             });
             
         test(
             "The global `global` property exists",
             () =>
             {
-                realGlobal.global = fakeNodeGlobal;
-                assert.strictEqual(getGlobalFallback(), fakeNodeGlobal);
+                globalReal.global = nodeGlobalFake;
+                assert.strictEqual(getGlobalFallback(), nodeGlobalFake);
             });
 
         test(
             "The global `self` property exists",
             () =>
             {
-                realGlobal.self = fakeBrowserGlobal;
-                assert.strictEqual(getGlobalFallback(), fakeBrowserGlobal);
+                globalReal.self = browserGlobalFake;
+                assert.strictEqual(getGlobalFallback(), browserGlobalFake);
             });
         
         test(
             "The global `window` property exists",
             () =>
             {
-                realGlobal.window = fakeBrowserGlobal;
-                assert.strictEqual(getGlobalFallback(), fakeBrowserGlobal);
+                globalReal.window = browserGlobalFake;
+                assert.strictEqual(getGlobalFallback(), browserGlobalFake);
             });
 
         test(
