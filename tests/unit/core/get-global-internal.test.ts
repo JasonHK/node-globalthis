@@ -2,18 +2,18 @@
 
 import Sinon from "sinon";
 
-import { getGlobal } from "../../../src/core/get-global";
+import { getGlobalInternal } from "../../../src/core/get-global-internal";
 import * as GetGlobalFallback from "../../../src/core/get-global-fallback";
 
 const { afterEach, suite, test } = intern.getPlugin("interface.tdd");
 const { assert } = intern.getPlugin("chai");
 
 suite(
-    "unit/core/get-global.test.ts",
+    "unit/core/get-global-internal.test.ts",
     () =>
     {
         suite(
-            "getGlobal()",
+            "getGlobalInternal()",
             () =>
             {
                 afterEach(
@@ -26,7 +26,7 @@ suite(
                     "The global `__GLOBAL__` property refers to the global `this` value",
                     () =>
                     {
-                        assert.strictEqual(getGlobal(), global);
+                        assert.strictEqual(getGlobalInternal(), global);
                         assert.doesNotHaveAllKeys(Object.prototype, ["__GLOBAL__"]);
                     });
         
@@ -52,7 +52,7 @@ suite(
         
                         const getGlobalFallbackMocked = Sinon.mock(GetGlobalFallback).expects("getGlobalFallback");
                         
-                        getGlobal();
+                        getGlobalInternal();
                         Sinon.assert.calledOnce(getGlobalFallbackMocked);
                     });
         
@@ -70,7 +70,7 @@ suite(
         
                         const getGlobalFallbackMocked = Sinon.mock(GetGlobalFallback).expects("getGlobalFallback");
         
-                        getGlobal();
+                        getGlobalInternal();
                         Sinon.assert.calledOnce(getGlobalFallbackMocked);
                         assert.doesNotHaveAllKeys(Object.prototype, ["__GLOBAL__"]);
         

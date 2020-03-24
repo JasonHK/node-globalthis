@@ -2,7 +2,7 @@
 
 import isObject from "lodash.isobject";
 
-import { getGlobal as getGlobalInternal } from "./core/get-global";
+import { getGlobalInternal } from "./core/get-global-internal";
 
 export function getGlobal(): typeof globalThis
 {

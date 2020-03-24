@@ -1,10 +1,12 @@
 "use strict";
 
+import "../interfaces/global";
+
 import isObject from "lodash.isobject";
 
 import { getGlobalFallback } from "./get-global-fallback";
 
-export function getGlobal(): typeof globalThis
+export function getGlobalInternal(): typeof globalThis
 {
     try
     {

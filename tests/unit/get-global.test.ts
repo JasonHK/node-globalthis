@@ -3,7 +3,7 @@
 import Sinon from "sinon";
 
 import { getGlobal } from "../../src/get-global";
-import * as GetGlobalInternal from "../../src/core/get-global";
+import * as GetGlobalInternal from "../../src/core/get-global-internal";
 
 const { after, afterEach, before, suite, test } = intern.getPlugin("interface.tdd");
 const { assert } = intern.getPlugin("chai");
@@ -63,7 +63,7 @@ suite(
                     "The global `globalThis` property doesn't exist",
                     () =>
                     {
-                        const getGlobalInternalMocked = Sinon.mock(GetGlobalInternal).expects("getGlobal");
+                        const getGlobalInternalMocked = Sinon.mock(GetGlobalInternal).expects("getGlobalInternal");
 
                         getGlobal();
                         Sinon.assert.calledOnce(getGlobalInternalMocked);
