@@ -2,7 +2,7 @@
 
 import "../interfaces/global";
 
-import isObject from "lodash.isobject";
+import { MAGIC_GLOBAL_KEY } from "../constants";
 
 import { getGlobalFallback } from "./get-global-fallback";
 
