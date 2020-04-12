@@ -8,6 +8,13 @@ import { isObject } from "../utilities/is-object";
 
 import { getGlobalFallback } from "./get-global-fallback";
 
+/**
+ * A reliable method to retrieve the global `this` value.
+ * 
+ * @hidden
+ * 
+ * @returns The global `this` value.
+ */
 export function getGlobalInternal(): typeof globalThis
 {
     try

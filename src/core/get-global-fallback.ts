@@ -2,6 +2,17 @@
 
 import { isObject } from "../utilities/is-object";
 
+/**
+ * A fallback method to retrieve the global `this` value.
+ * 
+ * This method will search for the known properties that the global `this` value possibly refers to.
+ * Then it will return the value if one of the properties exist, otherwise, it will throw an `Error`
+ * instead.
+ * 
+ * @hidden
+ * 
+ * @returns The global `this` value.
+ */
 export function getGlobalFallback(): typeof globalThis
 {
     if ((typeof self !== "undefined") && isObject(self))
