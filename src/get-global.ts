@@ -1,8 +1,8 @@
 "use strict";
 
-import isObject from "lodash.isobject";
-
 import { getGlobalInternal } from "./core/get-global-internal";
+
+import { isObject } from "./utilities/is-object";
 
 export function getGlobal(): typeof globalThis
 {
