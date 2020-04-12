@@ -12,7 +12,7 @@ export function getGlobalInternal(): typeof globalThis
     {
         Object.defineProperty(
             Object.prototype,
-            "__GLOBAL__",
+            MAGIC_GLOBAL_KEY,
             {
                 get() { return this; },
                 configurable: true,
@@ -36,6 +36,7 @@ export function getGlobalInternal(): typeof globalThis
     }
     finally
     {
-        delete Object.prototype.__GLOBAL__;
+        // Restore `Object.prototype` to its initial state.
+        delete Object.prototype[MAGIC_GLOBAL_KEY];
     }
 }
