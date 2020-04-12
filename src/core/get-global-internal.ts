@@ -4,6 +4,8 @@ import "../interfaces/global";
 
 import { MAGIC_GLOBAL_KEY } from "../constants";
 
+import { isObject } from "../utilities/is-object";
+
 import { getGlobalFallback } from "./get-global-fallback";
 
 export function getGlobalInternal(): typeof globalThis

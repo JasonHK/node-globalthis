@@ -1,6 +1,6 @@
 "use strict";
 
-import isObject from "lodash.isobject";
+import { isObject } from "../utilities/is-object";
 
 export function getGlobalFallback(): typeof globalThis
 {
