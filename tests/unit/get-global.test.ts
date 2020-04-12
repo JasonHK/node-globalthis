@@ -16,10 +16,11 @@ suite(
             "getGlobal()",
             () =>
             {
-                const globalThisFake = {};
+                const globalThisFake = {} as typeof globalThis;
         
                 let globalThisExists = false;
                 let globalThisReal: typeof globalThis;
+                let globalThisRealDescriptor: PropertyDescriptor;
         
                 before(
                     () =>
@@ -27,7 +28,8 @@ suite(
                         if ("globalThis" in global)
                         {
                             globalThisExists = true;
-                            globalThisReal = global.globalThis;
+                            globalThisRealDescriptor = Object.getOwnPropertyDescriptor(global, "globalThis");
+                            globalThisReal = globalThisRealDescriptor.value;
         
                             // @ts-ignore
                             delete global.globalThis;
@@ -46,8 +48,10 @@ suite(
                 after(
                     () =>
                     {
-                        // @ts-ignore
-                        if (globalThisExists) { global.globalThis = globalThisReal; }
+                        if (globalThisExists)
+                        {
+                            Object.defineProperty(global, "globalThis", globalThisRealDescriptor);
+                        }
                     });
         
                 test(
