@@ -33,6 +33,6 @@ export function getGlobalFallback(): typeof globalThis
     else
     {
         // Throws an `Error` when none of the known global properties exist.
-        throw new Error("Unable to locate the global `this` object.");
+        throw new Error("Unable to locate the global `this` value.");
     }
 }
