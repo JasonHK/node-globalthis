@@ -17,12 +17,16 @@ suite(
                 const nodeGlobalFake = {} as unknown as NodeJS.Global & typeof globalThis;
         
                 let globalReal: typeof global;
+                let globalRealDescriptor: PropertyDescriptor;
         
                 before(
                     () =>
                     {
-                        // Store the real `global` property in a safe place, then delete the property.
-                        globalReal = global;
+                        // Store the real `global` property and its descriptor in a safe place.
+                        globalRealDescriptor = Object.getOwnPropertyDescriptor(global, "global");
+                        globalReal = globalRealDescriptor.value;
+
+                        // Then delete the real `global` property.
                         delete global.global;
                     });
                 
@@ -39,7 +43,7 @@ suite(
                     () =>
                     {
                         // Restore the real `global` property.
-                        globalReal.global = globalReal;
+                        Object.defineProperty(globalReal, "global", globalRealDescriptor);
                     });
                     
                 test(
