@@ -12,20 +12,6 @@
             "./tests/unit/**/*.test.ts"
         ]
     },
-    "coverage": [
-        "./src/**/*.ts"
-    ],
-    "reporters": [
-        {
-            "name": "runner"
-        },
-        {
-            "name": "lcov"
-        },
-        {
-            "name": "htmlcoverage"
-        }
-    ],
     "configs": {
         "selenium": {}
     }

@@ -18,6 +18,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "test": "npx intern config=./configs/intern.json",
+    "test:coverage": "npx intern config=./configs/intern.coverage.json",
     "build:docs": "npx typedoc --options ./configs/typedoc.json src",
     "build:src:library": "npx tsc --project \"./configs/tsconfig.build.src.library.json\""
   },

@@ -1,0 +1,12 @@
+{
+    "$schema": "../node_modules/intern/schemas/config.json",
+    "extends": "./intern.json",
+    "coverage": [
+        "./src/**/*.ts"
+    ],
+    "reporters+": [
+        "runner",
+        "lcov",
+        "htmlcoverage"
+    ]
+}
