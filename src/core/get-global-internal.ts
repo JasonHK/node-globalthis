@@ -11,7 +11,11 @@ import { getGlobalFallback } from "./get-global-fallback";
 /**
  * A reliable method to retrieve the global `this` value.
  * 
- * @hidden
+ * This method utilized the fact that most of the ECMAScript implementations the global object was
+ * inherited from `Object.prototype`.
+ * 
+ * @see [*A horrifying `globalThis` polyfill in universal JavaScript*](https://mathiasbynens.be/notes/globalthis)
+ *      by [Mathias Bynens](https://mathiasbynens.be/)
  * 
  * @returns The global `this` value.
  */
