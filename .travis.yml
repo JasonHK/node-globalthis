@@ -1,0 +1,49 @@
+os: linux
+dist: bionic
+
+language: node_js
+node_js:
+    - 10
+    - 12
+    - 13
+
+before_script: |-
+    # Script: `before_script`
+
+    # Codecov
+    npm install -g codecov
+    
+    # Code Climate
+    curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+    chmod +x ./cc-test-reporter
+    ./cc-test-reporter before-build
+
+script: |-
+    # Script: `script`
+
+    npm run test:coverage
+
+after_success: |-
+    # Script: `after_success`
+
+    # Codecov
+    npx codecov
+
+    # Code Climate
+    ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+before_deploy: |-
+    # Script: `before_deploy`
+
+    npm run build:docs
+
+deploy:
+    edge: true
+    provider: pages
+    token: $GITHUB_DEPLOY_TOKEN
+    local_dir: docs
+    allow_empty_commit: true
+    cleanup: false
+    on:
+        node_js: 13
+        branch: master
