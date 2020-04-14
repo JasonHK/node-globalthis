@@ -9,6 +9,8 @@ import { isObject } from "../utilities/is-object";
  * Then it will return the value if one of the properties exist, otherwise, it will throw an `Error`
  * instead.
  * 
+ * @since 0.0.1
+ * 
  * @returns The global `this` value.
  */
 export function getGlobalFallback(): typeof globalThis
