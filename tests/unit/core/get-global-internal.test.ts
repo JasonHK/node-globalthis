@@ -37,7 +37,9 @@ suite(
                     () =>
                     {
                         // Ensure the function returns the global `this` value.
-                        assert.strictEqual(getGlobalInternal(), global);
+                        //
+                        // TODO: Waiting "@types/node" to be updated which brings `globalThis` support to `global`.
+                        assert.strictEqual(getGlobalInternal(), global as unknown as typeof globalThis);
 
                         // Ensure the `getGlobalFallback` function was not called.
                         Sinon.assert.notCalled(getGlobalFallbackMocked);

@@ -26,7 +26,9 @@ export function getGlobalFallback(): typeof globalThis
     else if ((typeof global !== "undefined") && isObject(global))
     {
         // The global `global` property, available in Node.js runtime environment.
-        return global;
+        //
+        // TODO: Waiting "@types/node" to be updated which brings `globalThis` support to `global`.
+        return (global as unknown as typeof globalThis);
     }
     else
     {
