@@ -21,9 +21,7 @@
     "build:docs": "npx typedoc --options ./configs/typedoc.json src",
     "build:src:library": "npx tsc --project \"./configs/tsconfig.build.src.library.json\""
   },
-  "dependencies": {
-    "lodash.isobject": "^3.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jsdom": "^16.1.0",
     "@types/lodash.isobject": "^3.0.6",
