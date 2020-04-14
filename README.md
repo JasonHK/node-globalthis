@@ -3,7 +3,8 @@
 
 A polyfill package providing universal support for the global `globalThis` property.
 
-[![npm-version-badge]][npm] [![npm-download-badge]][npm] [![npm-license-badge]][github-license] [![dependency-status-badge]][libraries.io] ![maintenance-state-badge] [![build-status-badge]][travis] [![code-maintainability-badge]][codeclimate] [![code-coverage-badge]][codecov]
+[![npm-version-badge]][npm] [![npm-download-badge]][npm] [![npm-license-badge]][github-license] [![dependency-status-badge]][libraries.io] [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FJasonHK%2Fnode-globalthis.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FJasonHK%2Fnode-globalthis?ref=badge_shield)
+![maintenance-state-badge] [![build-status-badge]][travis] [![code-maintainability-badge]][codeclimate] [![code-coverage-badge]][codecov]
 
 [![license-status-badge]][fossa]
 
@@ -37,3 +38,7 @@ A polyfill package providing universal support for the global `globalThis` prope
 <!-- FOSSA -->
 [fossa]: https://app.fossa.com/projects/git%2Bgithub.com%2FJasonHK%2Fnode-globalthis
 [license-status-badge]: https://app.fossa.com/api/projects/git%2Bgithub.com%2FJasonHK%2Fnode-globalthis.svg?type=large "License status"
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FJasonHK%2Fnode-globalthis.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FJasonHK%2Fnode-globalthis?ref=badge_large)
