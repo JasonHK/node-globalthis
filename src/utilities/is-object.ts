@@ -6,8 +6,6 @@
  * @remarks
  * Functions will not be count as an object by this function.
  * 
- * @hidden
- * 
  * @param payload An value to be determined.
  * @returns The assertion result.
  */
