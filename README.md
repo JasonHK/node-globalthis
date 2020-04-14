@@ -7,10 +7,13 @@ A polyfill package providing universal support for the global `globalThis` prope
 
 ## License
 
-Made with <span style="color: #E53E3E">&#10084;</span> by [Jason Kwok][author-website].<br>
+Made with <span style="color: #E53E3E">&#10084;</span> by [Jason Kwok][author].<br>
 Licensed under [the Unlicense][github-license].
 
 [![license-status-badge]][fossa]
+
+<!-- Author -->
+[author]: https://jasonhk.net/
 
 <!-- GitHub -->
 [github-license]: https://github.com/JasonHK/node-globalthis/blob/master/LICENSE
