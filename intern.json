@@ -12,6 +12,17 @@
             "./tests/unit/**/*.test.ts"
         ]
     },
+    "coverage": [
+        "./src/**/*.ts"
+    ],
+    "reporters+": [
+        {
+            "name": "lcov"
+        },
+        {
+            "name": "htmlcoverage"
+        }
+    ],
     "configs": {
         "selenium": {
 
