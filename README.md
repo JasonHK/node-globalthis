@@ -5,6 +5,11 @@ A polyfill package providing universal support for the global `globalThis` prope
 
 [![npm-version-badge]][npm] [![npm-download-badge]][npm] [![npm-license-badge]][github-license] [![dependency-status-badge]][libraries.io] ![maintenance-state-badge] [![build-status-badge]][travis] [![code-maintainability-badge]][codeclimate] [![code-coverage-badge]][codecov]
 
+## License
+
+Made with <span style="color: #E53E3E">&#10084;</span> by [Jason Kwok][author-website].<br>
+Licensed under [the Unlicense][github-license].
+
 [![license-status-badge]][fossa]
 
 <!-- GitHub -->
