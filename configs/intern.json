@@ -1,5 +1,5 @@
 {
-    "$schema": "./node_modules/intern/schemas/config.json",
+    "$schema": "../node_modules/intern/schemas/config.json",
     "node": {
         "tsconfig": "./configs/tsconfig.test.json",
         "plugins": [],
@@ -15,7 +15,10 @@
     "coverage": [
         "./src/**/*.ts"
     ],
-    "reporters+": [
+    "reporters": [
+        {
+            "name": "runner"
+        },
         {
             "name": "lcov"
         },
@@ -24,8 +27,6 @@
         }
     ],
     "configs": {
-        "selenium": {
-
-        }
+        "selenium": {}
     }
 }
