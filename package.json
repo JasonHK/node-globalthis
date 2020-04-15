@@ -20,7 +20,8 @@
     "test": "npx intern config=./configs/intern.json",
     "test:coverage": "npx intern config=./configs/intern.coverage.json",
     "build:docs": "npx typedoc --options ./configs/typedoc.json src",
-    "build:src:library": "npx tsc --project \"./configs/tsconfig.build.src.library.json\""
+    "build:src:declare": "npx tsc --project ./configs/tsconfig.build.src.declare.json",
+    "build:src:library": "npx tsc --project ./configs/tsconfig.build.src.library.json"
   },
   "dependencies": {},
   "devDependencies": {
@@ -30,6 +31,6 @@
     "sinon": "9.0.x",
     "ts-node": "8.8.x",
     "typedoc": "0.17.4",
-    "typescript": "3.8.x"
+    "typescript": "next"
   }
 }
