@@ -24,7 +24,7 @@ suite(
                     () =>
                     {
                         // Store the real `global` property and its descriptor in a safe place.
-                        globalRealDescriptor = Object.getOwnPropertyDescriptor(global, "global");
+                        globalRealDescriptor = Object.getOwnPropertyDescriptor(global, "global")!;
                         globalReal = globalRealDescriptor.value;
 
                         // Then delete the real `global` property.

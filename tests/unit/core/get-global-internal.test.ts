@@ -16,13 +16,13 @@ suite(
             "getGlobalInternal()",
             () =>
             {
-                let getGlobalFallbackMocked: Sinon.SinonExpectation;
+                let getGlobalFallbackMock: Sinon.SinonExpectation;
 
                 beforeEach(
                     () =>
                     {
                         // Mock the `getGlobalFallback` function.
-                        getGlobalFallbackMocked = Sinon.mock(GetGlobalFallback).expects("getGlobalFallback");
+                        getGlobalFallbackMock = Sinon.mock(GetGlobalFallback).expects("getGlobalFallback");
                     });
 
                 afterEach(
@@ -42,7 +42,7 @@ suite(
                         assert.strictEqual(getGlobalInternal(), global as unknown as typeof globalThis);
 
                         // Ensure the `getGlobalFallback` function was not called.
-                        Sinon.assert.notCalled(getGlobalFallbackMocked);
+                        Sinon.assert.notCalled(getGlobalFallbackMock);
 
                         // Ensure `Object.prototype` was restored to its initial state.
                         assert.doesNotHaveAllKeys(Object.prototype, ["__GLOBAL__"]);
@@ -61,24 +61,24 @@ suite(
                             .callsFake(
                                 (target, key, descriptor) =>
                                 {
+                                    // Since I was stubbing `Object.defineProperty` and Sinon.JS's stub feature utilizes this method, I
+                                    // have to store the real `Object.defineProperty` method and use it here instead of simply use
+                                    // `stub.wrappedMethod` to handle calls from Sinon.JS.
                                     if ((target === Object.prototype) && (key === "__GLOBAL__"))
                                     {
                                         throw new TypeError();
                                     }
                                     else
                                     {
-                                        // Since I was stubbing `Object.defineProperty` and Sinon.JS's stub feature utilizes this method, I
-                                        // have to store the real `Object.defineProperty` method and return it here instead of simply return
-                                        // `stub.wrappedMethod`.
                                         return definePropertyReal(target, key, descriptor);
                                     }
                                 });
                         
-                        // Calls the function.
+                        // Executes the function.
                         getGlobalInternal();
 
                         // Ensure the `getGlobalFallback` function was called once.
-                        Sinon.assert.calledOnce(getGlobalFallbackMocked);
+                        Sinon.assert.calledOnce(getGlobalFallbackMock);
 
                         // Ensure `Object.prototype` was restored to its initial state.
                         assert.doesNotHaveAllKeys(Object.prototype, ["__GLOBAL__"]);
@@ -97,11 +97,11 @@ suite(
                                 configurable: true,
                             });
         
-                        // Calls the function.
+                        // Executes the function.
                         getGlobalInternal();
 
                         // Ensure the `getGlobalFallback` function was called once.
-                        Sinon.assert.calledOnce(getGlobalFallbackMocked);
+                        Sinon.assert.calledOnce(getGlobalFallbackMock);
 
                         // Ensure `Object.prototype` was restored to its initial state.
                         assert.doesNotHaveAllKeys(Object.prototype, ["__GLOBAL__"]);

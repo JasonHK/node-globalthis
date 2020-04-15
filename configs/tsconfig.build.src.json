@@ -9,6 +9,9 @@
         "alwaysStrict": true,
         "noImplicitReturns": true,
         "noImplicitThis": true,
+        "strictBindCallApply": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
     },
     "include": [
         "../src/**/*.ts",
