@@ -67,9 +67,9 @@ suite(
                                     }
                                     else
                                     {
-                                        // Since I was stubbing `Object.defineProperty` and Sinon.JS's stub feature utilizes this method,
-                                        // I have to store the real `Object.defineProperty` method and return it here instead of simply
-                                        // return `stub.wrappedMethod`.
+                                        // Since I was stubbing `Object.defineProperty` and Sinon.JS's stub feature utilizes this method, I
+                                        // have to store the real `Object.defineProperty` method and return it here instead of simply return
+                                        // `stub.wrappedMethod`.
                                         return definePropertyReal(target, key, descriptor);
                                     }
                                 });

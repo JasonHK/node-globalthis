@@ -10,6 +10,10 @@ import { isObject } from "./utilities/is-object";
  */
 export function applyPolyfill(): void
 {
+    // Determine whether the global `globalThis` property exists or not. Then determine whether its
+    // attributes compile with the specification or not.
+    //
+    // If all of the checks above passed, abort the polyfill operation.
     const descriptor = Object.getOwnPropertyDescriptor(context, "globalThis");
     if (isObject(descriptor))
     {
@@ -17,6 +21,7 @@ export function applyPolyfill(): void
         if (configurable && writable && !enumerable && (value === context)) { return; }
     }
 
+    // If any of the checks above failed, try to apply the polyfill to the global scope.
     try
     {
         Object.defineProperty(
