@@ -11,7 +11,7 @@
  * @param payload An value to be determined.
  * @returns The assertion result.
  */
-export function isObject(payload: unknown): boolean
+export function isObject(payload: unknown): payload is object
 {
     return ((typeof payload === "object") && (payload !== null));
 }
