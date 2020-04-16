@@ -18,7 +18,6 @@ suite(
             {
                 const globalThisFake = {} as typeof globalThis;
         
-                let globalThisReal: typeof globalThis;
                 let globalThisRealDescriptor: PropertyDescriptor | undefined;
         
                 before(
@@ -27,8 +26,6 @@ suite(
                         globalThisRealDescriptor = Object.getOwnPropertyDescriptor(global, "globalThis");
                         if (globalThisRealDescriptor)
                         {
-                            globalThisReal = globalThisRealDescriptor.value;
-        
                             // @ts-ignore
                             delete global.globalThis;
                         }
