@@ -1,5 +1,6 @@
 {
     "$schema": "../node_modules/intern/schemas/config.json",
+    "basePath": "../",
     "reporters": [
         "runner"
     ],
@@ -11,11 +12,15 @@
         ]
     },
     "browser": {
-        "suites": [
-            "./tests/unit/**/*.test.ts"
-        ]
+        "suites": []
     },
     "configs": {
-        "selenium": {}
+        "selenium": {
+            "environments": "chrome",
+            "suites": [],
+            "functionalSuites": [
+                "./tests/functional/**/*.test.ts"
+            ]
+        }
     }
 }
