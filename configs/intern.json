@@ -1,5 +1,8 @@
 {
     "$schema": "../node_modules/intern/schemas/config.json",
+    "reporters": [
+        "runner"
+    ],
     "node": {
         "tsconfig": "./configs/tsconfig.test.json",
         "plugins": [],

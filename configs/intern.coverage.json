@@ -5,7 +5,6 @@
         "./src/**/*.ts"
     ],
     "reporters+": [
-        "runner",
         "lcov",
         "htmlcoverage"
     ]
