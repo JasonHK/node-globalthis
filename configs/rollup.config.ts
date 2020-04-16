@@ -36,7 +36,8 @@ export default {
     plugins: [
         RollupPluginTS(
             {
-                tsconfig: "./configs/tsconfig.build.src.json",
+                // tsconfig: Path.resolve(DIRECTORIES.CONFIGS, "./tsconfig.build.src.json"),
+                tsconfig: Path.resolve(DIRECTORIES.CONFIGS, "./tsconfig.build.src.library.json"),
             }),
     ],
 } as RollupOptions;
