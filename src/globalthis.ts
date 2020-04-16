@@ -2,4 +2,6 @@
 
 import { getGlobal } from "./get-global";
 
-export const globalThis = getGlobal();
+import { IGlobalThis } from "./interfaces/globalthis";
+
+export const globalThis: IGlobalThis = getGlobal();
