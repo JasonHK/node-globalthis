@@ -14,6 +14,7 @@ import { getGlobalFallback } from "./get-global-fallback";
  * This method utilized the fact that most of the ECMAScript implementations the global object was
  * inherited from `Object.prototype`.
  * 
+ * @internal
  * @since 0.0.1
  * @see [*A horrifying `globalThis` polyfill in universal JavaScript*](https://mathiasbynens.be/notes/globalthis)
  *      by [Mathias Bynens](https://mathiasbynens.be/)
