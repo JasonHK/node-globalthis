@@ -7,6 +7,8 @@ import { isObject } from "./utilities/is-object";
 /**
  * Apply the `globalThis` polyfill to the global scope if the global `globalThis` property does not
  * exist, or its attributes do not compile with the specification.
+ * 
+ * @since 0.0.1
  */
 export function applyPolyfill(): void
 {
