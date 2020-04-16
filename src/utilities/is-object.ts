@@ -6,6 +6,7 @@
  * @remarks
  * Functions will not be count as an object by this function.
  * 
+ * @internal
  * @since 0.0.1
  * 
  * @param payload An value to be determined.
