@@ -3,5 +3,7 @@
     "compilerOptions": {
         "rootDir": "../",
     },
-    "files": [],
+    "files": [
+        "./rollup.config.ts",
+    ],
 }
