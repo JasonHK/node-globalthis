@@ -1,13 +1,8 @@
 {
     "mode": "file",
     "out": "docs",
-    "tsconfig": "./configs/tsconfig.build.src.json",
-    "exclude": [
-        "**/src/constants.ts",
-        "**/src/core/**/*.ts",
-        "**/src/interfaces/global.ts",
-        "**/src/utilities/**/*.ts"
-    ],
+    "tsconfig": "./configs/tsconfig.build.src.declare.json",
+    "exclude": [],
     "includeDeclarations": false,
     "excludePrivate": true
 }
