@@ -1,17 +1,23 @@
 "use strict";
 
-import { globalThis as context } from "./globalthis";
+import { getGlobal } from "./get-global";
 
 import { isObject } from "./utilities/is-object";
+
+let context: typeof globalThis;
 
 /**
  * Apply the `globalThis` polyfill to the global scope if the global `globalThis` property does not
  * exist, or its attributes do not compile with the specification.
  * 
  * @since 0.0.1
+ * 
+ * @param bypassCache Whether to use the cached context, if exist. Defaults to `true`.
  */
-export function applyPolyfill(): void
+export function applyPolyfill(bypassCache: boolean = true): void
 {
+    if (!bypassCache || !isObject(context)) { context = getGlobal(); }
+
     // Determine whether the global `globalThis` property exists or not. Then determine whether its
     // attributes compile with the specification or not.
     //
