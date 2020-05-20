@@ -5,6 +5,11 @@ import { getGlobal } from "./get-global";
 
 import { isObject } from "./utilities/is-object";
 
+/**
+ * The global `this` value.
+ * 
+ * @internal
+ */
 let context: typeof globalThis;
 
 /**

@@ -1,7 +1,13 @@
 "use strict";
 
+/**
+ * @internal
+ */
 export const ERROR_APPLY_POLYFILL_FAILED = "Failed to apply the global `globalThis` property polyfill.";
 
+/**
+ * @internal
+ */
 export const ERROR_LOCATE_GLOBAL_FAILED = "Unable to locate the global `this` value.";
 
 /**
