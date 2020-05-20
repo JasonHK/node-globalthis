@@ -76,6 +76,9 @@
 						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="globals.html#error_apply_polyfill_failed" class="tsd-kind-icon">ERROR_<wbr>APPLY_<wbr>POLYFILL_<wbr>FAILED</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#error_locate_global_failed" class="tsd-kind-icon">ERROR_<wbr>LOCATE_<wbr>GLOBAL_<wbr>FAILED</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#context" class="tsd-kind-icon">context</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#globalthis" class="tsd-kind-icon">global<wbr>This</a></li>
 							</ul>
 						</section>
@@ -97,7 +100,7 @@
 					<div class="tsd-signature tsd-kind-icon">IGlobal<wbr>This<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">globalThis</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JasonHK/node-globalthis/blob/31ef308/src/interfaces/globalthis.ts#L12">interfaces/globalthis.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/JasonHK/node-globalthis/blob/014755e/src/interfaces/globalthis.ts#L12">interfaces/globalthis.ts:12</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -119,12 +122,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="error_apply_polyfill_failed" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> ERROR_<wbr>APPLY_<wbr>POLYFILL_<wbr>FAILED</h3>
+					<div class="tsd-signature tsd-kind-icon">ERROR_<wbr>APPLY_<wbr>POLYFILL_<wbr>FAILED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Failed to apply the global &#x60;globalThis&#x60; property polyfill."</span><span class="tsd-signature-symbol"> = &quot;Failed to apply the global &#x60;globalThis&#x60; property polyfill.&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/JasonHK/node-globalthis/blob/014755e/src/constants.ts#L3">constants.ts:3</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="error_locate_global_failed" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> ERROR_<wbr>LOCATE_<wbr>GLOBAL_<wbr>FAILED</h3>
+					<div class="tsd-signature tsd-kind-icon">ERROR_<wbr>LOCATE_<wbr>GLOBAL_<wbr>FAILED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Unable to locate the global &#x60;this&#x60; value."</span><span class="tsd-signature-symbol"> = &quot;Unable to locate the global &#x60;this&#x60; value.&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/JasonHK/node-globalthis/blob/014755e/src/constants.ts#L5">constants.ts:5</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="context" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagLet">Let</span> context</h3>
+					<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">globalThis</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/JasonHK/node-globalthis/blob/014755e/src/apply-polyfill.ts#L8">apply-polyfill.ts:8</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="globalthis" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> global<wbr>This</h3>
 					<div class="tsd-signature tsd-kind-icon">global<wbr>This<span class="tsd-signature-symbol">:</span> <a href="globals.html#iglobalthis" class="tsd-signature-type">IGlobalThis</a><span class="tsd-signature-symbol"> = getGlobal()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JasonHK/node-globalthis/blob/31ef308/src/globalthis.ts#L12">globalthis.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/JasonHK/node-globalthis/blob/014755e/src/globalthis.ts#L12">globalthis.ts:12</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -145,13 +178,13 @@
 					<a name="applypolyfill" class="tsd-anchor"></a>
 					<h3>apply<wbr>Polyfill</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">apply<wbr>Polyfill<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">apply<wbr>Polyfill<span class="tsd-signature-symbol">(</span>bypassCache<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JasonHK/node-globalthis/blob/31ef308/src/apply-polyfill.ts#L13">apply-polyfill.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/JasonHK/node-globalthis/blob/014755e/src/apply-polyfill.ts#L18">apply-polyfill.ts:18</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -165,6 +198,15 @@
 									</dd>
 								</dl>
 							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> bypassCache: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether to use the cached context, if exist. Defaults to <code>true</code>.</p>
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -179,7 +221,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JasonHK/node-globalthis/blob/31ef308/src/get-global.ts#L17">get-global.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/JasonHK/node-globalthis/blob/014755e/src/get-global.ts#L17">get-global.ts:17</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -213,6 +255,15 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#iglobalthis" class="tsd-kind-icon">IGlobal<wbr>This</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#error_apply_polyfill_failed" class="tsd-kind-icon">ERROR_<wbr>APPLY_<wbr>POLYFILL_<wbr>FAILED</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#error_locate_global_failed" class="tsd-kind-icon">ERROR_<wbr>LOCATE_<wbr>GLOBAL_<wbr>FAILED</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#context" class="tsd-kind-icon">context</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#globalthis" class="tsd-kind-icon">global<wbr>This</a>
