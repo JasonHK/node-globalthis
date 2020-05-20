@@ -18,11 +18,11 @@ let context: typeof globalThis;
  * 
  * @since 0.0.1
  * 
- * @param bypassCache Whether to use the cached context, if exist. Defaults to `true`.
+ * @param bypassCache Whether to use the cached context, if exist. Defaults to `false`.
  */
-export function applyPolyfill(bypassCache: boolean = true): void
+export function applyPolyfill(bypassCache: boolean = false): void
 {
-    if (!bypassCache || !isObject(context)) { context = getGlobal(); }
+    if (bypassCache || !isObject(context)) { context = getGlobal(); }
 
     // Determine whether the global `globalThis` property exists or not. Then determine whether its
     // attributes compile with the specification or not.
