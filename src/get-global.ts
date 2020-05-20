@@ -16,12 +16,6 @@ import { isObject } from "./utilities/is-object";
  */
 export function getGlobal(): typeof globalThis
 {
-    if ((typeof globalThis !== "undefined") && isObject(globalThis))
-    {
-        return globalThis;
-    }
-    else
-    {
-        return getGlobalInternal();
-    }
-}
+    return ((typeof globalThis !== "undefined") && isObject(globalThis))
+        ? globalThis
+        : getGlobalInternal();
