@@ -3,7 +3,7 @@
 /**
  * Determine whether the payload is an object or not.
  * 
- * @remarks
+ * @notes
  * Functions will not be count as an object by this function.
  * 
  * @internal

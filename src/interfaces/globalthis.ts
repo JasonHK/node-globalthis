@@ -3,7 +3,7 @@
 /**
  * Representing the global `this` value.
  * 
- * @remarks
+ * @notes
  * This type alias was required since the type of a variable named `globalThis` cannot be set as
  * `typeof globalThis` directly.
  * 
