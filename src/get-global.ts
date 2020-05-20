@@ -19,3 +19,4 @@ export function getGlobal(): typeof globalThis
     return ((typeof globalThis !== "undefined") && isObject(globalThis))
         ? globalThis
         : getGlobalInternal();
+}
