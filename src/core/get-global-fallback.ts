@@ -1,5 +1,6 @@
 "use strict";
 
+import { ERROR_LOCATE_GLOBAL_FAILED } from "../constants";
 import { isObject } from "../utilities/is-object";
 
 /**
@@ -36,6 +37,6 @@ export function getGlobalFallback(): typeof globalThis
     else
     {
         // Throws an `Error` when none of the known global properties exist.
-        throw new Error("Unable to locate the global `this` value.");
+        throw new Error(ERROR_LOCATE_GLOBAL_FAILED);
     }
 }

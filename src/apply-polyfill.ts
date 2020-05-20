@@ -1,5 +1,6 @@
 "use strict";
 
+import { ERROR_APPLY_POLYFILL_FAILED } from "./constants";
 import { getGlobal } from "./get-global";
 
 import { isObject } from "./utilities/is-object";
@@ -43,6 +44,6 @@ export function applyPolyfill(bypassCache: boolean = true): void
     }
     catch
     {
-        throw new Error("Failed to apply the global `globalThis` property polyfill.");
+        throw new Error(ERROR_APPLY_POLYFILL_FAILED);
     }
 }
