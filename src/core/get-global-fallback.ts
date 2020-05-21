@@ -2,6 +2,7 @@
 
 import { ERROR_LOCATE_GLOBAL_FAILED } from "../constants";
 import { isObject } from "../utilities/is-object";
+import type { IGlobalThis } from "../interfaces/globalthis";
 
 /**
  * A fallback method to retrieve the global `this` value.
@@ -15,7 +16,7 @@ import { isObject } from "../utilities/is-object";
  * 
  * @returns The global `this` value.
  */
-export function getGlobalFallback(): typeof globalThis
+export function getGlobalFallback(): IGlobalThis
 {
     if ((typeof self !== "undefined") && isObject(self))
     {
@@ -32,7 +33,7 @@ export function getGlobalFallback(): typeof globalThis
         // The global `global` property, available in Node.js runtime environment.
         //
         // TODO: Waiting "@types/node" to be updated which brings `globalThis` support to `global`.
-        return (global as unknown as typeof globalThis);
+        return (global as unknown as IGlobalThis);
     }
     else
     {

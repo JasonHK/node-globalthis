@@ -2,6 +2,8 @@
 
 import { getGlobalInternal } from "./core/get-global-internal";
 
+import type { IGlobalThis } from "./interfaces/globalthis";
+
 import { isValidContext } from "./utilities/is-valid-context";
 
 /**
@@ -14,7 +16,7 @@ import { isValidContext } from "./utilities/is-valid-context";
  * 
  * @returns The global `this` value.
  */
-export function getGlobal(): typeof globalThis
+export function getGlobal(): IGlobalThis
 {
     return ((typeof globalThis !== "undefined") && isValidContext(globalThis))
         ? globalThis

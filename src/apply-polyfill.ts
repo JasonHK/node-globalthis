@@ -3,6 +3,8 @@
 import { ERROR_APPLY_POLYFILL_FAILED } from "./constants";
 import { getGlobal } from "./get-global";
 
+import type { IGlobalThis } from "./interfaces/globalthis";
+
 import { isObject } from "./utilities/is-object";
 
 /**
@@ -10,7 +12,7 @@ import { isObject } from "./utilities/is-object";
  * 
  * @internal
  */
-let context: typeof globalThis;
+let context: IGlobalThis;
 
 /**
  * Apply the `globalThis` polyfill to the global scope if the global `globalThis` property does not

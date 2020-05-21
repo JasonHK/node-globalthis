@@ -3,8 +3,8 @@
 import "../interfaces/global";
 
 import { MAGIC_GLOBAL_KEY } from "../constants";
-
 import { isObject } from "../utilities/is-object";
+import type { IGlobalThis } from "../interfaces/globalthis";
 
 import { getGlobalFallback } from "./get-global-fallback";
 
@@ -21,7 +21,7 @@ import { getGlobalFallback } from "./get-global-fallback";
  * 
  * @returns The global `this` value.
  */
-export function getGlobalInternal(): typeof globalThis
+export function getGlobalInternal(): IGlobalThis
 {
     try
     {

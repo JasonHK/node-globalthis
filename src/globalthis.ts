@@ -2,7 +2,7 @@
 
 import { getGlobal } from "./get-global";
 
-import { IGlobalThis } from "./interfaces/globalthis";
+import type { IGlobalThis } from "./interfaces/globalthis";
 
 /**
  * The global `this` value.
