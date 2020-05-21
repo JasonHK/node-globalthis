@@ -2,7 +2,7 @@
 
 import { getGlobalInternal } from "./core/get-global-internal";
 
-import { isObject } from "./utilities/is-object";
+import { isValidContext } from "./utilities/is-valid-context";
 
 /**
  * Retrieve the global `this` value.
@@ -16,7 +16,7 @@ import { isObject } from "./utilities/is-object";
  */
 export function getGlobal(): typeof globalThis
 {
-    return ((typeof globalThis !== "undefined") && isObject(globalThis))
+    return ((typeof globalThis !== "undefined") && isValidContext(globalThis))
         ? globalThis
         : getGlobalInternal();
 }
