@@ -17,6 +17,14 @@ suite(
             () =>
             {
                 const globalThisFake = {} as typeof globalThis;
+                Object.defineProperty(
+                    globalThisFake,
+                    "globalThis",
+                    {
+                        value: globalThisFake,
+                        configurable: true,
+                        writable: true,
+                    });
         
                 let globalThisRealDescriptor: PropertyDescriptor | undefined;
         
