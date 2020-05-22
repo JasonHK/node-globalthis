@@ -16,8 +16,7 @@ suite(
                 const browserGlobalFake = {} as (Window & typeof globalThis);
                 const nodeGlobalFake = {} as (NodeJS.Global & typeof globalThis);
         
-                // TODO: Waiting "@types/node" to be updated which brings `globalThis` support to `global`.
-                let globalReal: typeof global & typeof globalThis;
+                let globalReal: typeof globalThis;
                 let globalRealDescriptor: PropertyDescriptor;
         
                 before(
