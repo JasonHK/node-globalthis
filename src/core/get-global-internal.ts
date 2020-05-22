@@ -40,14 +40,9 @@ export function getGlobalInternal(): IGlobalThis
 
     try
     {
-        if ((typeof __GLOBAL__ !== "undefined") && isObject(__GLOBAL__))
-        {
-            return __GLOBAL__;
-        }
-        else
-        {
-            return getGlobalFallback();
-        }
+        return ((typeof __GLOBAL__ !== "undefined") && isObject(__GLOBAL__))
+            ? __GLOBAL__
+            : getGlobalFallback();
     }
     finally
     {
