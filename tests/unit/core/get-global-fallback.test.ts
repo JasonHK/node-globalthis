@@ -13,8 +13,8 @@ suite(
             "getGlobalFallback()",
             () =>
             {
-                const browserGlobalFake = {} as (Window & typeof globalThis);
-                const nodeGlobalFake = {} as (NodeJS.Global & typeof globalThis);
+                const browserGlobalFake = {} as typeof window;
+                const nodeGlobalFake = {} as typeof global;
         
                 let globalReal: typeof globalThis;
                 let globalRealDescriptor: PropertyDescriptor;
