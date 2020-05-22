@@ -1,19 +1,12 @@
 {
-    "extends": "./tsconfig.build.json",
+    "extends": "./tsconfig.base.json",
     "compilerOptions": {
         "rootDir": "../src",
         "lib": [
-            "DOM",
-            "ES2015",
-        ],
-        "alwaysStrict": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "strictBindCallApply": true,
-        "strictNullChecks": true,
-        "strictPropertyInitialization": true,
+            "DOM"
+        ]
     },
     "include": [
-        "../src/**/*.ts",
+        "../src/**/*.ts"
     ],
 }

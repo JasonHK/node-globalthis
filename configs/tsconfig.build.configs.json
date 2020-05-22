@@ -1,9 +1,9 @@
 {
     "extends": "./tsconfig.base.json",
     "compilerOptions": {
-        "rootDir": "../",
+        "rootDir": "../"
     },
     "files": [
-        "./rollup.config.ts",
+        "./rollup.config.ts"
     ],
 }

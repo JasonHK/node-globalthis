@@ -4,20 +4,20 @@
         "rootDir": "../",
         "paths": {
             "*": [
-                "node_modules/*",
+                "node_modules/*"
             ],
             "src": [
-                "src",
+                "src"
             ],
             "src/*": [
-                "src/*",
+                "src/*"
             ],
         },
         "types": [
-            "intern",
-        ],
+            "intern"
+        ]
     },
     "include": [
-        "../tests/**/*.ts",
-    ],
+        "../tests/**/*.ts"
+    ]
 }

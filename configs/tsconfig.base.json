@@ -1,20 +1,7 @@
 {
+    "extends": "@jasonhk/typescript-config",
     "compilerOptions": {
-        "target": "ES2015",
         "module": "CommonJS",
-        "moduleResolution": "Node",
-        "baseUrl": "../",
-        "paths": {
-            "*": [
-                "node_modules/*",
-                "types/*",
-            ],
-        },
-        "allowSyntheticDefaultImports": true,
-        "emitDecoratorMetadata": false,
-        "esModuleInterop": true,
-        "experimentalDecorators": true,
-        "resolveJsonModule": true,
-        "strictNullChecks": true,
+        "baseUrl": "../"
     },
 }
