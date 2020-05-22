@@ -10,5 +10,5 @@
  */
 export function isObject(payload: unknown): payload is object
 {
-    return ((typeof payload === "object") && (payload !== null));
+    return ((typeof(payload) === "object") && (payload !== null));
 }

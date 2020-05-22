@@ -40,13 +40,13 @@ export function getGlobalInternal(): IGlobalThis
 
     try
     {
-        return ((typeof __GLOBAL__ !== "undefined") && isObject(__GLOBAL__))
+        return ((typeof(__GLOBAL__) !== "undefined") && isObject(__GLOBAL__))
             ? __GLOBAL__
             : getGlobalFallback();
     }
     finally
     {
         // Restore `Object.prototype` to its initial state.
-        delete Object.prototype[MAGIC_GLOBAL_KEY];
+        delete(Object.prototype[MAGIC_GLOBAL_KEY]);
     }
 }

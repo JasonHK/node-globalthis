@@ -18,17 +18,17 @@ import type { IGlobalThis } from "../interfaces/globalthis";
  */
 export function getGlobalFallback(): IGlobalThis
 {
-    if ((typeof self !== "undefined") && isObject(self))
+    if ((typeof(self) !== "undefined") && isObject(self))
     {
         // The global `self` property, available in browser and Web Worker environment.
         return self;
     }
-    else if ((typeof window !== "undefined") && isObject(window))
+    else if ((typeof(window) !== "undefined") && isObject(window))
     {
         // The global `window` property, available in browser environment.
         return window;
     }
-    else if ((typeof global !== "undefined") && isObject(global))
+    else if ((typeof(global) !== "undefined") && isObject(global))
     {
         // The global `global` property, available in Node.js runtime environment.
         return global;

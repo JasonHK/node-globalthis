@@ -18,7 +18,7 @@ import { isValidContext } from "./utilities/is-valid-context";
  */
 export function getGlobal(): IGlobalThis
 {
-    return ((typeof globalThis !== "undefined") && isValidContext(globalThis))
+    return ((typeof(globalThis) !== "undefined") && isValidContext(globalThis))
         ? globalThis
         : getGlobalInternal();
 }
