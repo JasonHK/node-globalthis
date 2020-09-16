@@ -1,6 +1,6 @@
-import type { IGlobalThis } from "../interfaces/globalthis";
+import { IGlobalThis } from "../../IGlobalThis";
 
-import { isObject } from "./is-object";
+import { isObject } from "./isObject";
 
 /**
  * Determine whether the payload is a valid `globalThis` value or not.

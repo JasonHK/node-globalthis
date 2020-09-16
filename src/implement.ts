@@ -1,6 +1,6 @@
 "use strict";
 
-import { applyPolyfill } from "./apply-polyfill";
+import { applyPolyfill } from "./applyPolyfill";
 
 applyPolyfill();
 

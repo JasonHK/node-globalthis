@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * Representing the global `this` value.
  * 

@@ -1,11 +1,12 @@
-"use strict";
+import { IGlobalThis } from "./IGlobalThis";
+import { getGlobal } from "./getGlobal";
 
-import { ERROR_APPLY_POLYFILL_FAILED } from "./constants";
-import { getGlobal } from "./get-global";
+import { isObject } from "./internal/utilities/isObject";
 
-import type { IGlobalThis } from "./interfaces/globalthis";
-
-import { isObject } from "./utilities/is-object";
+/**
+ * @internal
+ */
+const ERROR_APPLY_POLYFILL_FAILED = "Failed to apply the global `globalThis` property polyfill.";
 
 /**
  * The global `this` value.

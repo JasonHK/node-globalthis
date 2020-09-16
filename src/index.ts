@@ -1,9 +1,6 @@
 "use strict";
 
-import { globalThis } from "./globalthis";
-
-export * from "./apply-polyfill";
-export * from "./get-global";
-export * from "./globalthis";
-
-export default globalThis;
+export * from "./IGlobalThis";
+export * from "./applyPolyfill";
+export * from "./getGlobal";
+export * from "./globalThis";

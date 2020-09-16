@@ -1,10 +1,7 @@
-"use strict";
+import { IGlobalThis } from "./IGlobalThis";
 
-import { getGlobalInternal } from "./core/get-global-internal";
-
-import type { IGlobalThis } from "./interfaces/globalthis";
-
-import { isValidContext } from "./utilities/is-valid-context";
+import { getGlobalInternal } from "./internal/getGlobalInternal";
+import { isValidContext } from "./internal/utilities/isValidContext";
 
 /**
  * Retrieve the global `this` value.
@@ -18,7 +15,7 @@ import { isValidContext } from "./utilities/is-valid-context";
  */
 export function getGlobal(): IGlobalThis
 {
-    return ((typeof(globalThis) !== "undefined") && isValidContext(globalThis))
+    return ((typeof globalThis !== "undefined") && isValidContext(globalThis))
         ? globalThis
         : getGlobalInternal();
 }
